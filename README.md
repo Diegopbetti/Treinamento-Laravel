@@ -64,3 +64,63 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Como iniciar o projeto
+
+Vale lembrar que esse projeto não tem como intenção ser hospedado, apenas é o projeto base para os treinamentos que vou gravar.
+
+### Pré requisitos (php, composer, apache, mysql) 
+
+
+Instalar php:
+
+MacOs:
+```
+/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
+```
+
+Windows PowerShell:
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
+```
+
+Linux:
+```
+/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
+```
+
+Além disso você vai precisar do composer e de alguma ferramenta para servidor local e mysql.
+
+### Configuração inicial
+
+Bash:
+```
+composer install
+php artisan key:generate
+php artisan migrate --seed
+npm install
+npm run build
+```
+
+### Hospedando localmente
+
+Opção 1:
+
+Bash:
+```
+composer run dev
+```
+
+-----------------------
+
+Opção 2:
+
+Bash:
+```
+php artisan serve
+```
+
+Bash:
+```
+npm run dev
+```
