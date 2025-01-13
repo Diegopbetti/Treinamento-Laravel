@@ -127,11 +127,10 @@ npm run dev
 
 ## Comandos usados nesse treinamento:
 
-´´´
+```
 php artisan install api 
 composer require "darkaonline/l5-swagger" 
 php artisan make:Controller Api/NomeDaController
 php artisan make:Resource NomaDaResource
 php artisan l5-swagger:generate
-
-´´´
+```
